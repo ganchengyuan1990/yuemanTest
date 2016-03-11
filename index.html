@@ -1,0 +1,1047 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+    <title>悦慢玩意</title>
+    <link href="./coffee.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="./css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link href="./css/jquery.mmenu.all.css" rel="stylesheet" />
+    <link href="./css/yueman.css" rel="stylesheet" />
+    <script src="./js/arttemplate.js"></script>
+    <script src="./js/els.js"></script>
+
+    <script type="text/javascript" src="./js/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.hammer.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.mmenu.min.all.js"></script>
+</head>
+
+<body id="test1" class="test1">
+    <div id="content">
+        <div id="header_bar">
+        </div>
+        <!-- E header_bar -->
+        <div class="container">
+            <div id="header" class="text-center">
+                <div class="container">
+                    <div class="text-center header">
+                        <h1 class="bold sange" id="sange">九型人格不专业测试</h1>
+                        <h1 class="jiuxing" id="nine"></span>
+                    </div>
+                    <!-- E header -->
+                    <div id="bd" class="panel">
+                        <div id="panel1" class="panel-body">
+                            <form action="#">
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>按照内心的意愿选择哟！</dd>
+                                </dl>
+                                <div class="buttons">
+                                    <a href="#result" class="btn btn-lg btn-success" style="width: 100%" onclick="return next(0);">
+                                        <strong style="color:#94421C;">开始测试</strong></a>
+                                </div>
+                                <div class="buttons" style="margin-top: 10px;">
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" id="weixinfollowlink2" class="btn btn-lg btn-danger" style="width: 100%;
+                            background: #ffffff; border-color: #94421C;"><strong style="color:#94421C;">关注公众号</strong></a> </div>
+                            </form>
+                        </div>
+
+
+                        <div id="arttemplate">
+                            <script id="test" type="text/html">
+                            {{each list as value i}}
+                                <div id="panel2" class="panel-body js_answer" style="display: none;">
+                                    <form action="#" method="POST">
+                                        <a name="result" href="javascript:void(0)"></a>
+                                        <div class="form-group avatar text-center">
+                                            <label for="" class="sr-only">
+                                                Ç°ÑÔ</label>
+                                            <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                                    text-align: center; width: 100%; padding-top: 18px;"><img src="./images/umind-coffee.png"></span> </a>
+                                        </div>
+                                        <dl>
+                                            <dd>{{value.attr}}</dd>
+                                        </dl>
+                                        <ul class="list-group  js_group">
+                                            <li class="list-group-item" onclick="return toggle(this);">
+                                                <input name="g" type="radio" class="" value={{value.val}} /> A.Yes
+                                            </li>
+                                            <li class="list-group-item" onclick="return toggle(this);">
+                                                <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                        </ul>
+                                        <span>{{i + 1}}/36</span>
+                                    </form>
+                                </div>
+                            {{/each}}
+                            </script>
+                        </div>
+<!--
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;"><img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>1.我比较理性，讲究实用</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="a" /> A.Yes
+                                    </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>1/36</span>
+                            </form>
+                        </div>
+  
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        2.我十分注重细节，但有时效率不高</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="a" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>2/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        3.秩序和规则对我来说十分重要</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="a" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>3/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        4.别人不能完成他份内的事时，会令我很失望甚至生气</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="a" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>4/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        5.付出会比接受给我更大的满足感</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="b" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>5/36</span>
+                            </form>
+                        </div>
+
+                       <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        6.我知道如何让别人喜欢我</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="b" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>6/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        7.很多时候我会有强烈得寂寞感</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="b" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>7/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        8.我很容易看见别人的优点和功劳</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="b" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>8/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        9.我喜欢当主角，希望得到大家的注意</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="c" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>9/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        10.有时我会讲求效率而牺牲完美和原则</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="c" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>10/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        11.我喜欢跟别人竞争，嫉妒心比较强</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="c" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>11/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        12.我喜欢告诉别人我做过的事情，和我知道的事情</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="c" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>12/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        13.我有很强的创造天分和想象力, 喜欢将事情重新整合</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="d" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>13/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        14.我一直在寻找完美的心灵伴侣</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="d" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>14/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        15.我比较感性，有时难以控制自己的情绪</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="d" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>15/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        16.在恋爱中我是一个极其缺乏安全感的人</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="d" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>16/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        17.在人群中我时常感到害羞和不安</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="e" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>17/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        18.当别人问一些笼统的问题时，我更倾向不回答</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="e" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>18/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        19.我不排斥那些言辞带有侵略性，或过于感性的人</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="e" /> B.No </li>
+                                </ul>
+                                <span>19/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        20.我很有包容力,彬彬有礼,但通常跟人的感情互动不深</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="e" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>20/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        21.我是一位忠实的朋友和伙伴</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="f" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>21/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        22.我常常试探或考验朋友,伴侣的忠诚</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="f" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>22/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        23.当沉浸在工作或我擅长的领域时,别人会觉得我冷酷无情</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="f" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>23/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        24.我最不喜欢的事是撒谎，无论是出于善意还是恶意</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="f" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>24/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        25.我喜欢具有戏剧性，刺激的生活</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="g" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>25/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        26.我的计划比我实际完成的要多</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="g" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>26/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        27.我常担心自由被剥夺, 因此不爱作承诺</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="g" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>27/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        28.此时此刻我觉得有很多有趣的事情等着我去做</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="g" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>28/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        29.我知错能改, 但由于执著好强,周围的人还是感觉到压力</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="h" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>29/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        30.我要求光明正大, 为此不惜与人发生冲突</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="h" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>30/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        31.我野心勃勃,喜欢挑战和渴望登上高峰</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="h" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>31/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        32.我比较独立，一切靠自己</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="h" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>32/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        33.身体上的舒适对我非常重要</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="i" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>33/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        34.我不要求得到太多的注意力</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="i" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>34/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        35.我容易感到沮丧和麻木更多于愤怒</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="i" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>35/36</span>
+                            </form>
+                        </div>
+
+                        <div id="panel2" class="panel-body js_answer" style="display: none;">
+                            <form action="#" method="POST">
+                                <a name="result" href="javascript:void(0)"></a>
+                                <div class="form-group avatar text-center">
+                                    <label for="" class="sr-only">
+                                        Ç°ÑÔ</label>
+                                    <a href="http://www.tpy10.net/ewm.php?name=yuemanjiangren" class="img-circle" name="1"><span style="float: left;
+                            text-align: center; width: 100%; padding-top: 18px;">
+                            <img src="./images/umind-coffee.png"></span> </a>
+                                </div>
+                                <dl>
+                                    <dd>
+                                        36.我有时善良可爱, 有时又粗野暴躁,很难捉摸</dd>
+                                </dl>
+                                <ul class="list-group  js_group">
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="i" /> A.Yes </li>
+                                    <li class="list-group-item" onclick="return toggle(this);">
+                                        <input name="g" type="radio" class="" value="0" /> B.No </li>
+                                </ul>
+                                <span>36/36</span>
+                            </form>
+                        </div>-->
+
+
+                       <!-- <div id="panel3" class="panel-body js_result" data-id="0" style="display: none;">
+                            <h1 class="bold text-danger">
+                     图表</h1>
+                        <hr>
+                    </div>-->
+                    <!-- E bd -->
+                </div>
+                <!-- E container -->
+                <input type="hidden" name="totalsc" id="totalsc" value="0" />
+
+
+            </div>
+
+
+
+
+            <div id="mcover" onclick="document.getElementById('mcover').style.display='';" style="display: none;"><img src="./images/guide.png"></div>
+            <div id="pop_success" class="text-center" style="display: none;">
+                <div class="bd text-center">
+                    <p style="line-height: 110px;">
+                        请稍等！</p>
+                    <img src="COFFEE.gif">
+                </div>
+                <!-- E bd -->
+            </div>
+            <!-- E pop_success -->
+            <div id="popup-1" class="tip" style="display: none;">
+                <div>
+                    <a id="close1" href="javascript:void(0)"><i class="glyphicon glyphicon-remove"></i>
+                        </a>
+                    <div class="row text-center">
+                        <a href="game.id87.com" class="btn btn-danger col-sm-12 btn-lg" id="weixinfollowlink">Î¢ÐÅ¹Ø×¢£ºÕâÀïÌíÄãµÄÁ´½Ó</a>
+                    </div>
+                    <!-- E discuss -->
+                </div>
+            </div>
+            <!-- E tip -->
+            <div id="follow" class="well" style="display: none;">
+                <a id="close1" href="javascript:void(0)">X</a>
+                <div class="row text-center">
+                    <a href="http://game.id87.com" class="btn btn-danger col-sm-12 btn-lg" id="weixinfollowlink1">Î¢ÐÅ¹Ø×¢£ºÌæ»»ÄãµÄÁ´½Ó</a>
+                </div>
+                <!-- E row -->
+            </div>
+
+            <div id="copy">
+                <p class="text-center">
+                    <!--
+                        <a href="http://game.id87.com" style="color: #F00; font-weight: bold;font-size: 15px;">&copy; 啦啦啦</a>
+                    -->
+                </p>
+            </div>
+            <!-- E copy -->
+            <div id="share_tips" class="sr-only">
+                <div class="container text-right">
+                    µã»÷ÓÒÉÏ½Ç£¬·ÖÏí¸øÅóÓÑ/ÅóÓÑÈ¦ <i class="glyphicon glyphicon-hand-up element-animation"></i>
+                </div>
+                <!-- E container -->
+            </div>
+                
+                <script type="text/javascript" src="http://youzikuwebfont.oss-cn-beijing.aliyuncs.com/api.lib.min.js"></script>
+
+                <script type="text/javascript">
+                $youzikuapi.asyncLoad("http://api.youziku.com/webfont/FastJS/yzk_72E818E83CEF3B60", function() {
+                    $youziku.load(".sange", "6e22cab62201455c82099bb039937c9b", "winmantun23001");
+                    $youziku.load(".jiuxing", "6e22cab62201455c82099bb039937c9b", "winmantun23001");
+                    $youziku.draw();
+                })
+                </script>
+        </div>
+
+    </div>
+    <div id="panel3" class="panel-body js_result" data-id="1" style="display: none;">
+            <div id="survey-chart" style="height:450px"></div>
+            <div style="text-align:center;color: brown;font-weight: bold;"><span id="sandy" style="font-size:20px; display:none;"></span></div>
+            <dl id="contact" style="display: none;    margin-top: 20px;">
+                <dt style="color: rgb(117,77,57);font-size: 20px;">如果你很讨厌你的老板，或者恰巧想要换一种<s>工作</s>生活方式...恭喜你! We want you!请与我们联系吧!</dt>
+                <dd>
+                        <p>联系人：鹿小姐
+                        <br>联系电话：********
+                        <br>微信：*******
+                    </p>
+                </dd>
+            </dl>
+            <div class="buttons" style="margin-top: 30px;">
+                <a href="javascript:void(0)" class="btn btn-lg btn-success" style="width: 100%" onclick="$('#mcover').show()">
+                                邀请小伙伴一起来做测试！</a>
+            </div>
+        </div>
+</div>
+
+
+<script type="text/javascript" src="./js/yuemanFunction.js"></script>
+</body>
+
+
+</html>

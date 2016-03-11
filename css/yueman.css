@@ -1,0 +1,26 @@
+body {
+        background: rgb(118, 77, 57);
+        background-size: 100% auto !important;
+        font-family: "幼圆";
+        /*font-family: 'WuJiaRui7e644c02a';*/
+    }
+    
+    body .avatar .img-circle {
+        background: #94421C !important
+    }
+    
+    body form .btn {
+        /*background: #347433 !important;
+        border-color: #347433 !important*/
+    }
+    
+    .jiuxing {
+        font-size: 16px !important;
+    }
+    
+    #header h1,
+    #header p {
+        font-size: 24px;
+        color: rgb(118, 77, 57);
+        background: none !important;
+    }
